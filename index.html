@@ -1,18 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset='utf-8'>
-        <title>小轩010的个人站</title>
-    </head>
 
-    <body>
-        <h1>欢迎访问小轩010的个人站</h1>
-        <h3>毕业纪念视频</h3>
-        <iframe id='player1' src="//player.bilibili.com/player.html?aid=456604197&bvid=BV1Q5411a7Dq&cid=220656794&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-        <p id='closeTimeDp'>本网站托管于gitee,不会因服务器到期而关站doge</p>
-    </body>
+<head>
+    <meta charset='utf-8'>
+    <title>小轩010的个人站</title>
+</head>
 
-    <script>
-        setInterval(function(){});
-    </script>
+<body>
+    <h1>欢迎访问小轩010的个人站</h1>
+    <h3>毕业纪念视频</h3>
+    <iframe id='player1' src="//player.bilibili.com/player.html?aid=456604197&bvid=BV1Q5411a7Dq&cid=220656794&page=1"
+        scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+    <p id='closeTimeDp'>本网站托管于gitee,不会因服务器到期而关站doge</p>
+</body>
+
+<h1 id='test1'>test </h1>
+<script>
+    window.onload = function () {
+        var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
+        httpRequest.open('POST', 'http://tinywebdb.appinventor.space/api', true); //第二步：打开连接
+        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
+        httpRequest.send('user=xxdns&secret=28761853&action=get&tag=ipv6');//发送请求 将情头体写在send中
+        /**
+         * 获取数据后的处理程序
+         */
+        httpRequest.onreadystatechange = function () {//请求后的回调接口，可将请求成功后要执行的程序写在其中
+            if (httpRequest.readyState == 4 && httpRequest.status == 200) {//验证请求是否发送成功
+                var json = httpRequest.responseText;//获取到服务端返回的数据
+                console.log(json);
+            }
+        };
+    }
+</script>
+
 </html>
