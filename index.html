@@ -2,29 +2,38 @@
 <html>
 
 <head>
+    <!--样式布局-->
     <meta charset='utf-8'>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>小轩010的个人站</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
+    <!--网站内容-->
+    <link rel="short icon" href="/icon.ico" />
+    <link rel="icon" href="/icon.ico" />
+    <link rel="bookmark" href="/icon.ico" />
+
+    <meta itemprop="name" content="小轩的个人站" />
+    <meta itemprop="image" content="/icon.png" />
+    <meta  name="description" content="欢迎访问小轩的个人站">
+
+    <title>小轩的个人站</title>
+
+    <!--文件引用-->
+    <link rel="stylesheet" href="/style.css">
+    
 </head>
 
 <body>
-    <h1>xiaoxuan010</h1>>
+    <div style="width: fit-content; margin: auto;">
+        <img id="logo" src="/icon_small.png" alt="logo" style="width: 3em ;vertical-align: middle;">
+        <nobr style="margin-left: 0.1em; vertical-align: middle; font-size: 1.5em;">小轩的个人站</nobr>
+    </div>
+    <hr>
+
+    
 </body>
 
-<h1 id='test1'>test </h1>
 <script>
     window.onload = function () {
-        var httpRequest = new XMLHttpRequest();//第一步：创建需要的对象
-        httpRequest.open('POST', 'http://tinywebdb.appinventor.space/api', true); //第二步：打开连接
-        httpRequest.setRequestHeader("Content-type", "application/x-www-form-urlencoded");//设置请求头 注：post方式必须设置请求头（在建立连接后设置请求头）
-        httpRequest.send('user=xxdns&secret=28761853&action=get&tag=ipv6');
-        httpRequest.onreadystatechange = function () {
-            if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-                var json = httpRequest.responseText;
-                //console.log(json);
-		document.getElementbyId('test1').innerHTML="test1.1";
-            }
-        };
     }
 </script>
 
