@@ -1,10 +1,5 @@
-.titleBar {
-    padding: 5px;
-}
-
-.titleBar .title{
-    margin:auto;
-    width: fit-content;
+.plain_a {
+    text-decoration: none;
 }
 
 .entrance {
@@ -14,10 +9,9 @@
     height: 6em;
     border: lightgray 2px solid;
     border-radius: 20px;
-}
-
-.nostylea * {
-    color: black; text-decoration: none;
+    color: black; 
+    text-decoration: none;
+    position: relative;
 }
 
 .entrance img {
@@ -25,7 +19,15 @@
     vertical-align: middle;
 }
 
-.entrance .subtitle {
-    font-size: 2em;
+.entrance .title {
+    color: black;
+    font-size: 1.5em;
     vertical-align: middle;
+}
+
+.entrance .leader {
+    position: absolute;
+    bottom: 0px;
+    right: 5px;
+    color: #bbbbbb;
 }
