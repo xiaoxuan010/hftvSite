@@ -4,18 +4,25 @@
 
 .entrance {
     margin: auto;
-    margin-top: 20px;
+    margin-top: 1em;
     width: 98%;
     height: 6em;
     border: lightgray 2px solid;
     border-radius: 20px;
-    color: black; 
-    text-decoration: none;
     position: relative;
 }
 
+.entrance .container {
+    position: relative;
+    height: fit-content;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+}
+
 .entrance img {
-    height: 6em;
+    max-height: 6em;
+    max-width: 6em;
     vertical-align: middle;
 }
 
