@@ -1,0 +1,31 @@
+.titleBar {
+    padding: 5px;
+}
+
+.titleBar .title{
+    margin:auto;
+    width: fit-content;
+}
+
+.entrance {
+    margin: auto;
+    margin-top: 20px;
+    width: 98%;
+    height: 6em;
+    border: lightgray 2px solid;
+    border-radius: 20px;
+}
+
+.nostylea * {
+    color: black; text-decoration: none;
+}
+
+.entrance img {
+    height: 6em;
+    vertical-align: middle;
+}
+
+.entrance .subtitle {
+    font-size: 2em;
+    vertical-align: middle;
+}
