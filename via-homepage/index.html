@@ -1,0 +1,68 @@
+<html>
+
+<head>
+	<meta charset='utf-8'>
+    	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+        </head>
+
+        <body>
+            <div class="container">
+            	     <img class="smaller" src="https://s3.ax1x.com/2021/02/03/yQv9D1.md.png"></img>
+                     	</div>
+                         	<div class="container">
+                             		<p>
+                                     			<nobr id='sen'></nobr>
+                                                 			<nobr onclick="reSen();">↺</nobr>
+                                                             		</p>
+                                                                     	</div>
+                                                                         	<script>
+                                                                             		function reSen(){
+                                                                                         		fetch('https://api.btstu.cn/yan/api.php?encode=json')
+                                                                                                 		.then(function (res){
+                                                                                                             		    return res.json();
+                                                                                                         })
+                                                                                                         		.then(function (data) {
+                                                                                                                     		    var sen = document.getElementById('sen');
+                                                                                                                                 		    sen.innerText = data.text; 
+                                                                                                                                             		    sen.style.height = "auto";
+                                                                                                                 })
+                                                                                                                 		.catch(function (err) {
+                                                                                                                             		    console.error(err);
+                                                                                                                         })
+                                                                                     }
+                                                                                     		window.onload = reSen;
+                                                                                             	</script>
+
+                                                                                                 	<style>
+                                                                                                     		.container {
+                                                                                                                 			width: fit-content;
+                                                                                                                             			margin: auto;
+                                                                                                             }
+                                                                                                             		
+                                                                                                                     		#sen {
+                                                                                                                                 			font-size: 0.4em;
+                                                                                                                                             			border: 1px lightgrey solid;
+                                                                                                                                                         			border-radius: 5px;
+                                                                                                                                                                     			width: fit-content;
+                                                                                                                                                                                 			margin: auto;
+                                                                                                                                                                                             			padding: 5px 15px;
+                                                                                                                                                                                                         			margin-top: 10px;
+                                                                                                                                                                                                                     			height: 1em;
+                                                                                                                             }
+                                                                                                                             		
+                                                                                                                                     		.smaller {
+                                                                                                                                                 			max-width: 80px;
+                                                                                                                                                             			max-height: 80px;
+                                                                                                                                                                         			margin: auto;
+                                                                                                                                             }
+                                                                                                                                             	</style>
+                                                                                                                                                 </body>
+
+                                                                                                                                                 </html>
+                                                                                                                                             }
+                                                                                                                             }
+                                                                                                             }
+                                                                                                                         })
+                                                                                                                 })
+                                                                                                         })
+                                                                                     }
